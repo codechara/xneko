@@ -1,3 +1,9 @@
+import pygame
+
+import buildConfig
+
+pygame.init()
+
 class Main:
     def __init__(self):
         pass
