@@ -2,6 +2,6 @@
 # XNeko Build Configuration
 #
 
-VERSION = "1.0"
+VERSION = "0.0-develop"
 NEKO_ONLINE_VERSION = 1
-RES = (640, 480)
+FPS = 60
