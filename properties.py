@@ -1,3 +1,5 @@
+import os
+
 class Properties(dict):
     class Dot:
         CONFIG = {
@@ -21,10 +23,12 @@ class Properties(dict):
         return self
 
     def read(self):
-        with open(self.path, encoding="utf-8", mode="r") as f:
-            for line in f.readlines():
-                splited = line.split("=", 1)
-                self[splited[0]] = splited[1]
+        if os.path.exists(self.path):
+            with open(self.path, encoding="utf-8", mode="r") as f:
+                for line in f.read().split("\n"):
+                    if line:
+                        splited = line.split("=", 1)
+                        self[splited[0]] = splited[1]
 
         self.write()
 
