@@ -1,12 +1,9 @@
-from doctest import Example
-
 import pygame
 
 from screen.example import ExampleScreen
 
 pygame.init()
 
-import buildConfig
 from window import Window
 from properties import Properties
 from screen_manager import ScreenManager
