@@ -1,12 +1,11 @@
 import pygame
 
 from screen.example import ExampleScreen
-
-pygame.init()
-
 from window import Window
 from properties import Properties
 from screen_manager import ScreenManager
+
+pygame.init()
 
 def main():
     config = Properties(".config").overwrite(Properties.Dot.CONFIG).read()
