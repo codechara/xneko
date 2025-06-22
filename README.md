@@ -1,2 +1,3 @@
 # xneko
-Неоффицильный клиент [Neko: Online](https://neko_online.t.me) на Python & OpenGL для ПК.
+[Neko: Online](https://neko_online.t.me) \
+[Neko: Online Github](https://github.com/neko-online-team)
