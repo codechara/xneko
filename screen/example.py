@@ -1,6 +1,6 @@
 import pygame.event
 
-from screen.screen import Screen
+from screen_manager import Screen
 
 class ExampleScreen(Screen):
     def setup(self):

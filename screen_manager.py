@@ -3,7 +3,21 @@ import pygame
 import buildConfig
 from properties import Properties
 from window import Window
-from screen.screen import Screen
+
+class Screen:
+    def __init__(self, screen: pygame.Surface):
+        self.screen = screen
+
+        self.setup()
+
+    def setup(self):
+        pass
+
+    def tick(self, delta: int):
+        pass
+
+    def event(self, event: pygame.event.Event):
+        pass
 
 class ScreenManager:
     def __init__(self, config: Properties, window: Window):
