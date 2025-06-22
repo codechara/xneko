@@ -1,12 +1,9 @@
-import pygame
-
-import buildConfig
+import pygame, buildConfig
 
 pygame.init()
 
-class Main:
-    def __init__(self):
-        pass
+def main():
+    print(f"XNeko {buildConfig.VERSION} ({buildConfig.NEKO_ONLINE_VERSION})")
 
 if __name__ == "__main__":
-    Main()
+    main()
