@@ -17,9 +17,9 @@ class Window:
     def set_mode(self, mode: Modes):
         if mode == Window.Modes.WINDOWED:
             monitor = screeninfo.get_monitors()[0]
-            self.screen = pygame.display.set_mode((720, 480), pygame.RESIZABLE)
+            self.screen = pygame.display.set_mode((800, 600), pygame.RESIZABLE)
             self.__window = w.from_display_module()
-            self.__window.position = (monitor.width / 2 - 720 / 2, monitor.height / 2 - 480 / 2)
+            self.__window.position = (monitor.width / 2 - 800 / 2, monitor.height / 2 - 600 / 2)
         elif mode == Window.Modes.MINIMIZED:
             monitor = screeninfo.get_monitors()[0]
             self.screen = pygame.display.set_mode((300, 300), pygame.NOFRAME)
