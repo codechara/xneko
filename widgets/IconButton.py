@@ -20,6 +20,7 @@ class IconButton:
     def event(self, event: pygame.event.Event):
         if event.type == pygame.MOUSEMOTION:
             self.hover = event.pos[0] > self.position[0] and event.pos[0] < self.position[0]+IconButton.SIZE[0] and event.pos[1] > self.position[1] and event.pos[1] < self.position[1] + IconButton.SIZE[1]
+
         elif event.type == pygame.MOUSEBUTTONDOWN:
             if self.hover:
                 self.action()
