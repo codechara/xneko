@@ -1,9 +1,9 @@
 import pygame
 
-from screen.example import ExampleScreen
-from window import Window
-from properties import Properties
-from screen_manager import ScreenManager
+from screen.SetupScreen import SetupScreen
+from Window import Window
+from Properties import Properties
+from ScreenManager import ScreenManager
 
 pygame.init()
 
@@ -12,7 +12,7 @@ def main():
     window = Window()
     screen_manager = ScreenManager(config, window)
 
-    screen_manager.set(ExampleScreen)
+    screen_manager.set(SetupScreen)
     screen_manager.loop()
 
 if __name__ == "__main__":
