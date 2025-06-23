@@ -1,18 +1,19 @@
-import pygame
-
-import buildConfig
+from __future__ import annotations
+import pygame, buildConfig
 from Properties import Properties
 from Window import Window
 
 class Screen:
-    def __init__(self, screen: pygame.Surface):
+    def __init__(self, screen, screen_mgr: ScreenManager):
         self.screen = screen
+        self.screen_mgr = screen_mgr
 
     def loop(self, delta: int):
         pass
 
     def event(self, event: pygame.event.Event):
         pass
+
 
 class ScreenManager:
     def __init__(self, config: Properties, window: Window):
@@ -23,7 +24,7 @@ class ScreenManager:
         self.screen: Screen = None
 
     def set(self, screen_class: type[Screen]):
-        self.screen = screen_class(self.window.screen)
+        self.screen = screen_class(self.window.screen, self)
 
     def loop(self):
         delta = 0

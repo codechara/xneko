@@ -1,9 +1,9 @@
 import pygame
 
-from screen.SetupScreen import SetupScreen
 from Window import Window
 from Properties import Properties
 from ScreenManager import ScreenManager
+from screen.SetupScreen import SetupScreen
 
 pygame.init()
 

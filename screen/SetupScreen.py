@@ -1,22 +1,22 @@
 import pygame, colors, os, buildConfig
 
-from ScreenManager import Screen
+from ScreenManager import *
 from widgets.IconButton import IconButton
 from widgets.Button import Button
 from widgets.ButtonOutline import ButtonOutline
 
 class SetupScreen(Screen):
-    def __init__(self, screen: pygame.Surface):
-        super().__init__(screen)
+    def __init__(self, screen, screen_mgr: ScreenManager):
+        super().__init__(screen, screen_mgr)
 
         if os.path.exists(".session"):
             # Сессия существует, логин/регистрация не нужна
-            pass
+            exit
 
         self.font_small = pygame.font.Font("assets/Roboto.ttf", 12)
         self.font = pygame.font.Font("assets/Roboto.ttf", 16)
         self.font_welcome = pygame.font.Font("assets/Roboto-Bold.ttf", 48)
-        self.server_settings = IconButton(self.screen, "", exit)
+        self.server_settings = IconButton(self.screen, "", self.change_server_screen)
         self.first_play = Button(self.screen, ("", "Я играю впервые"), exit)
         self.have_account = ButtonOutline(self.screen, ("", "У меня уже есть аккаунт"), exit)
 
@@ -42,3 +42,7 @@ class SetupScreen(Screen):
         self.server_settings.event(e)
         self.first_play.event(e)
         self.have_account.event(e)
+
+    def change_server_screen(self):
+        from screen.SetupChangeServerScreen import SetupChangeServerScreen
+        self.screen_mgr.set(SetupChangeServerScreen)

@@ -1,5 +1,6 @@
 BACKGROUND =   (31, 31, 31)
 FOOTER =       (48, 48, 48)
+FOOTER_TITLE = (255, 255, 255)
 PRIMARY =      (64, 64, 64)
 FONT =         (255, 255, 255)
 FONT_VERSION = (15, 15, 15)
