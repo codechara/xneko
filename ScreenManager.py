@@ -8,11 +8,6 @@ class Screen:
     def __init__(self, screen: pygame.Surface):
         self.screen = screen
 
-        self.setup()
-
-    def setup(self):
-        pass
-
     def loop(self, delta: int):
         pass
 
