@@ -13,8 +13,8 @@ class IconButton:
         self.hover = False
 
     def tick(self, delta):
-        pygame.draw.ellipse(self.screen, (colors.BACKGROUND, colors.PRIMARY)[self.hover], (self.position[0], self.position[1], IconButton.SIZE[0], IconButton.SIZE[1]))
-        sd = self.font.render(self.symbol, True, colors.FONT)
+        pygame.draw.ellipse(self.screen, (colors.ICON_BUTTON, colors.ICON_BUTTON_HOVER)[self.hover], (self.position[0], self.position[1], IconButton.SIZE[0], IconButton.SIZE[1]))
+        sd = self.font.render(self.symbol, True, colors.ICON_BUTTON_ICON)
         self.screen.blit(sd, (self.position[0]+(IconButton.SIZE[0]/2-sd.get_size()[0]/2), self.position[1]+(IconButton.SIZE[1]/2-sd.get_size()[1]/2)))
 
     def event(self, event: pygame.event.Event):

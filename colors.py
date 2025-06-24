@@ -1,7 +1,28 @@
-BACKGROUND =   (31, 31, 31)
-FOOTER =       (48, 48, 48)
-FOOTER_TITLE = (255, 255, 255)
-PRIMARY =      (64, 64, 64)
-FONT =         (255, 255, 255)
-FONT_VERSION = (15, 15, 15)
-ACCENT =       (120, 120, 120)
+#
+# Цветовая палитра XNeko
+#
+
+# TODO: В будущем сделать кастомные темы
+
+# Background
+BACKGROUND = (255, 255, 255)
+BACKGROUND_FONT = (0, 0, 0)
+
+# Button
+BUTTON = (111, 0, 255)
+BUTTON_LABEL = (255, 255, 255)
+
+# ButtonOutline
+BUTTON_OUTLINE = (255, 255, 255)
+BUTTON_OUTLINE_OUTLINE = (71, 2, 161)
+BUTTON_OUTLINE_LABEL = (111, 0, 255)
+
+# IconButton
+ICON_BUTTON = (255, 255, 255)
+ICON_BUTTON_HOVER = (190, 190, 190)
+ICON_BUTTON_ICON = (0, 0, 0)
+
+# Footer
+FOOTER = (111, 0, 255)
+FOOTER_LABEL = (255, 255, 255)
+FOOTER_ICON_HOVER = (159, 84, 255)

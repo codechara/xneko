@@ -17,7 +17,7 @@ class Footer:
     def tick(self, delta):
         footer = pygame.Surface((self.screen.get_width(), Footer.HEIGHT))
         footer.fill(colors.FOOTER)
-        footer_title = self.font.render(self.title, True, colors.FOOTER_TITLE)
+        footer_title = self.font.render(self.title, True, colors.FOOTER_LABEL)
 
         if self.icon_left:
             footer.blit(footer_title, (64, 64/2-footer_title.get_height()/2))

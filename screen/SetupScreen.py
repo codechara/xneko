@@ -26,10 +26,10 @@ class SetupScreen(Screen):
         self.server_settings.position = (self.screen.get_width()-IconButton.SIZE[0]-12, 12)
         self.server_settings.tick(delta)
 
-        self.screen.blit(self.font_small.render(buildConfig.VERSION, True, colors.PRIMARY), (12, self.screen.get_size()[1] - 28))
+        self.screen.blit(self.font_small.render(buildConfig.VERSION, True, (0, 0, 0)), (12, self.screen.get_size()[1] - 28))
 
-        hello = self.font_welcome.render("Добро пожаловать!", True, colors.FONT)
-        first_play_text = self.font.render("Играете впервые, или у вас есть аккаунт?", True, colors.FONT)
+        hello = self.font_welcome.render("Добро пожаловать!", True, colors.BACKGROUND_FONT)
+        first_play_text = self.font.render("Играете впервые, или у вас есть аккаунт?", True, colors.BACKGROUND_FONT)
         self.screen.blit(hello, (self.screen.get_width()/2-hello.get_width()/2, self.screen.get_height()/2-120))
         self.screen.blit(first_play_text, (self.screen.get_width()/2-first_play_text.get_width()/2, self.screen.get_height()/2-40))
 
