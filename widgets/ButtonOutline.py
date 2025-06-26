@@ -17,9 +17,9 @@ class ButtonOutline(Button):
         pygame.draw.ellipse(self.screen, colors.BUTTON_OUTLINE_OUTLINE, (self.position[0]+s, self.position[1], Button.CIRCLE[0], Button.CIRCLE[1]))
         pygame.draw.rect(self.screen, colors.BUTTON_OUTLINE_OUTLINE, (self.position[0]+Button.CIRCLE[0]/2, self.position[1], s, Button.CIRCLE[1]))
 
-        pygame.draw.ellipse(self.screen, colors.BUTTON_OUTLINE, (self.position[0]+1, self.position[1]+1, Button.CIRCLE[0]-2, Button.CIRCLE[1]-2))
-        pygame.draw.ellipse(self.screen, colors.BUTTON_OUTLINE, (self.position[0]+1+s, self.position[1]+1, Button.CIRCLE[0]-2, Button.CIRCLE[1]-2))
-        pygame.draw.rect(self.screen, colors.BUTTON_OUTLINE, (self.position[0]+1+Button.CIRCLE[0]/2, self.position[1]+1, s, Button.CIRCLE[1]-2))
+        pygame.draw.ellipse(self.screen, (colors.BUTTON_OUTLINE, colors.BUTTON_OUTLINE_HOVER)[self.hover], (self.position[0]+1, self.position[1]+1, Button.CIRCLE[0]-2, Button.CIRCLE[1]-2))
+        pygame.draw.ellipse(self.screen, (colors.BUTTON_OUTLINE, colors.BUTTON_OUTLINE_HOVER)[self.hover], (self.position[0]+1+s, self.position[1]+1, Button.CIRCLE[0]-2, Button.CIRCLE[1]-2))
+        pygame.draw.rect(self.screen, (colors.BUTTON_OUTLINE, colors.BUTTON_OUTLINE_HOVER)[self.hover], (self.position[0]+1+Button.CIRCLE[0]/2, self.position[1]+1, s, Button.CIRCLE[1]-2))
 
         self.width = s + Button.CIRCLE[1]
 

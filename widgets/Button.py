@@ -24,9 +24,9 @@ class Button:
         else:
             s = text.get_size()[0]
 
-        pygame.draw.ellipse(self.screen, colors.BUTTON, (self.position[0], self.position[1], Button.CIRCLE[0], Button.CIRCLE[1]))
-        pygame.draw.ellipse(self.screen, colors.BUTTON, (self.position[0]+s, self.position[1], Button.CIRCLE[0], Button.CIRCLE[1]))
-        pygame.draw.rect(self.screen, colors.BUTTON, (self.position[0]+Button.CIRCLE[0]/2, self.position[1], s, Button.CIRCLE[1]))
+        pygame.draw.ellipse(self.screen, (colors.BUTTON, colors.BUTTON_HOVER)[self.hover], (self.position[0], self.position[1], Button.CIRCLE[0], Button.CIRCLE[1]))
+        pygame.draw.ellipse(self.screen, (colors.BUTTON, colors.BUTTON_HOVER)[self.hover], (self.position[0]+s, self.position[1], Button.CIRCLE[0], Button.CIRCLE[1]))
+        pygame.draw.rect(self.screen, (colors.BUTTON, colors.BUTTON_HOVER)[self.hover], (self.position[0]+Button.CIRCLE[0]/2, self.position[1], s, Button.CIRCLE[1]))
 
         self.width = s + Button.CIRCLE[1]
 
