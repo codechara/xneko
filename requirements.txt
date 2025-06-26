@@ -1,4 +1,6 @@
 pygame
+moderngl
+numpy
 requests
 websockets
 screeninfo

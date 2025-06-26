@@ -1,0 +1,2 @@
+VERSION = "dev"
+SERVER_VERSION = 1
